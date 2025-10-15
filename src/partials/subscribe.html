@@ -1,0 +1,65 @@
+<section class="subscribe section">
+  <div class="container subscribe-container">
+    <div class="first-wrapper">
+      <h2 class="subscribe-title">Join Our Coffee Community</h2>
+      <p class="subscribe-text">
+        Experience the joy of coffee delivered right to your door. Sign up
+        today!
+      </p>
+
+      <form class="subscribe-form" action="#" method="post">
+        <div class="input-wrapper">
+          <input 
+             oninput="this.form.querySelector('.subscribe-button').disabled = !this.checkValidity()"
+            type="email"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            class="subscribe-input"
+            id="subscribe-input"
+            placeholder="Your Email Here"
+            required
+          />
+          <span class="error-text" id="errorText">Error Text</span>
+        </div>
+        <button type="submit" class="subscribe-button">
+          Subscribe
+
+          <svg class="subscribe-svg" width="24" height="24"><use href="./img/spite.svg#icon-chevrons-right"></use></svg>
+        </button>
+        <label for="subscribe-input" class="subscribe-label">
+          By clicking Get Started, you agree to our Terms and Conditions.
+        </label>
+      </form>
+    </div>
+    <div class="second-wrapper">
+      <picture class="subscribe-picture">
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./img/subscribe/mobile-img-1x.webp 1x,
+            ./img/subscribe/mobile-img-2x.webp 2x
+          "
+        />
+        <source
+          media="(min-width: 768px) and (max-width: 1439px)"
+          srcset="
+            ./img/subscribe/tablet-img-1x.webp 1x,
+            ./img/subscribe/tablet-img-2x.webp 2x
+          "
+        />
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            ./img/subscribe/normal-img-1x.webp 1x,
+            ./img/subscribe/normal-img-2x.webp 2x
+          "
+        />
+
+        <img
+          class="subscribe-image"
+          src="./img/subscribe/mobile-img-1x.jpg"
+          alt="Coffee Community"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
