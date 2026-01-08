@@ -3,10 +3,9 @@ body {
 }
 
 .container {
-  width: 1080px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 15px;
-  outline: 1px solid red;
 }
 
 h1,
