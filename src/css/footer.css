@@ -1,0 +1,43 @@
+.footer {
+  position: relative;
+  height: 20px;
+  background-color: black;
+  margin-top: 2337px;
+}
+
+.text_content {
+  max-width: 521px;
+  margin: 0 auto;
+  height: 20px;
+  margin-top: 2337px;
+  margin-left: 379px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #939393;
+}
+
+.text_content:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 1199px) {
+  .text_content {
+    max-width: 521px;
+    margin-left: 20%;
+    margin-top: calc(2337px * 1.1);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text_content {
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: calc(2337px * 1.2);
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: normal;
+  }
+}
