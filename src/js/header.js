@@ -22,7 +22,7 @@ function fetchEventCards(searchText, countryCode) {
     });
 }
 
-heroSearchForm.addEventListener('submit', e => {
+heroSearchForm.addEventListener('submit', async e => {
   e.preventDefault();
 
   const searchText = searchInput.value.trim();
