@@ -1,3 +1,5 @@
+import spriteUrl from '../img/symbol-defs.svg';
+
 const eventsList = document.querySelector('.events-list');
 
 export function clearEvents() {
@@ -21,7 +23,7 @@ export function drawEvents(data = []) {
         <p>${event.dates.start.localDate}</p>
         <p>
           <svg class="icon-location">
-            <use href="../img/symbol-defs.svg#location"></use>
+            <use href="${spriteUrl}#location"></use>
           </svg>
           ${fullPlace}
           </p>
