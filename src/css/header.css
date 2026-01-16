@@ -66,13 +66,17 @@
   box-sizing: border-box;
 }
 
+.hero-search input {
+  padding: 10px 50px 10px 30px;
+}
+
 .hero-search input::placeholder {
   color: #939393;
 }
 
 .search-input button {
   position: absolute;
-  right: 30px;
+  right: 25px;
   top: 50%;
   transform: translateY(-50%);
   border: none;

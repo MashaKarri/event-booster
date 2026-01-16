@@ -1,17 +1,25 @@
+import { setSearch, getEvents } from './main-section-api';
+import { drawEvents, clearEvents } from './main-section-layout';
+
 const heroSearchForm = document.querySelector('.hero-search');
 const searchInput = document.querySelector('.search-input input');
 const countrySelect = document.querySelector('.search-select select');
 
-//функція, яка буде отримувати дані з API (зараз просто console.log())
 function fetchEventCards(searchText, countryCode) {
-  console.log('пошук подій за критеріями:');
-  console.log('текст:', searchText);
-  console.log('країна:', countryCode);
+  setSearch(searchText, countryCode);
+  clearEvents();
 
-  //виклик API і відображення карток у main
-  // fetch(``)
-  //   .then()
-  //   .catch();
+  getEvents()
+    .then(events => {
+      if (!events.length) {
+        alert('Нічого не знайдено');
+        return;
+      }
+      drawEvents(events);
+    })
+    .catch(error => {
+      console.log('Помилка при отриманні events:', error);
+    });
 }
 
 heroSearchForm.addEventListener('submit', e => {
@@ -26,6 +34,4 @@ heroSearchForm.addEventListener('submit', e => {
   }
 
   fetchEventCards(searchText, countryCode);
-
-  heroSearchForm.reset();
 });
