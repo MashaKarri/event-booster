@@ -14,7 +14,23 @@
 .logo {
   position: absolute;
   top: 35px;
-  left: 45px;
+  left: 35px;
+  z-index: 2;
+  width: 150px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.logo-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 210px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -135,6 +151,13 @@
     width: 100%;
   }
 
+  .logo-bg {
+    top: 0;
+    left: 0;
+    width: 190px;
+    height: 155px;
+  }
+
   .hero-content {
     padding-top: 90px;
     gap: 35px;
@@ -168,6 +191,13 @@
 
   .logo img {
     width: 100%;
+  }
+
+  .logo-bg {
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 125px;
   }
 
   .hero-content {
