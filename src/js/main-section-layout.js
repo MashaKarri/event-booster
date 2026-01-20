@@ -31,7 +31,7 @@ export function drawEvents(data = []) {
         <p>${event.dates.start.localDate}</p>
         <p>
           <svg class="icon-location">
-            <use href="img/symbol-defs.svg#location"></use>
+            <use href="/img/symbol-defs.svg#location"></use>
           </svg>
           ${fullPlace}
         </p>

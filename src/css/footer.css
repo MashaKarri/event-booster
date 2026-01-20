@@ -8,13 +8,14 @@
 }
 
 .text_content {
-  width: 521px;
+  width: 560px;
   height: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   color: #939393;
   text-align: center;
+  padding: 20px 0;
 }
 
 .text_content:hover {
@@ -25,6 +26,7 @@
 .heart {
   color: #c31515;
 }
+
 
 @media screen and (max-width: 1199px) {
   .text_content {
