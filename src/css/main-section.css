@@ -12,6 +12,7 @@
 .events-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
   gap: 70px;
   list-style: none;
   padding: 0;
@@ -32,8 +33,8 @@
   max-width: 180px;
   object-fit: cover;
   display: block;
-  border-top-left-radius: 18px;
-  border-bottom-right-radius: 18px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 #eventsList > li h3,
@@ -102,4 +103,18 @@
 #eventsList > li:hover {
   transform: translateY(-4px);
   transition: transform 0.2s;
+}
+
+@media screen and (max-width: 1199px) {
+  .events-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .events-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
