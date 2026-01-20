@@ -1,4 +1,4 @@
-import spritePath from '../img/symbol-defs.svg?url';
+import spritePath from '../img/symbol-defs.svg';
 
 const eventsList = document.querySelector('.events-list');
 
