@@ -16,7 +16,7 @@ function fetchEventCards(searchText = '', countryCode = '') {
         const noResultsDiv = document.createElement('div');
         noResultsDiv.classList.add('no-results');
         noResultsDiv.innerHTML = `
-          <img src="../img/main-section/no-results.svg" alt="No results found" />
+          <img src="./img/main-section/no-results.svg" alt="No results found" />
           <p>Нічого не знайдено</p>
         `;
         eventsList.appendChild(noResultsDiv);
