@@ -37,3 +37,12 @@ heroSearchForm.addEventListener('submit', e => {
 
   fetchEventCards(searchText, countryCode);
 });
+
+countrySelect.addEventListener('change', () => {
+  const searchText = searchInput.value.trim();
+  const countryCode = countrySelect.value;
+
+  if (!searchText && !countryCode) return;
+
+  fetchEventCards(searchText, countryCode);
+});
