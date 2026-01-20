@@ -19,20 +19,23 @@ export async function getEvents() {
   try {
     const today = new Date().toISOString();
 
+    const params = new URLSearchParams({
+      apikey: API_KEY,
+      page: page - 1,
+      size: PER_PAGE,
+      sort_by: 'eventdate',
+      order: 'asc',
+      eventdate_from: today,
+    });
+
+    if (searchText) params.append('keyword', searchText);
+    if (countryCode) params.append('countryCode', countryCode);
+
     const response = await fetch(
-      `https://app.ticketmaster.com/discovery/v2/events.json?` +
-        `keyword=${searchText}` +
-        `&countryCode=${countryCode}` +
-        `&page=${page - 1}` +
-        `&size=${PER_PAGE}` +
-        `&apikey=${API_KEY}` +
-        `&sort_by=eventdate` +
-        `&order=asc` +
-        `&eventdate_from=${today}`
+      `https://app.ticketmaster.com/discovery/v2/events.json?${params}`
     );
 
     const data = await response.json();
-
     return data._embedded?.events || [];
   } catch (error) {
     console.log(error);

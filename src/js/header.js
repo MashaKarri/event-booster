@@ -5,7 +5,7 @@ const heroSearchForm = document.querySelector('.hero-search');
 const searchInput = document.querySelector('.search-input input');
 const countrySelect = document.querySelector('.search-select select');
 
-function fetchEventCards(searchText, countryCode) {
+function fetchEventCards(searchText = '', countryCode = '') {
   setSearch(searchText, countryCode);
   clearEvents();
 
@@ -22,7 +22,9 @@ function fetchEventCards(searchText, countryCode) {
     });
 }
 
-heroSearchForm.addEventListener('submit', async e => {
+fetchEventCards();
+
+heroSearchForm.addEventListener('submit', e => {
   e.preventDefault();
 
   const searchText = searchInput.value.trim();
