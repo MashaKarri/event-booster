@@ -10,7 +10,7 @@
           ${v}
         </p>
       </li>`}).join("");y.insertAdjacentHTML("beforeend",t)}const N=document.querySelector(".hero-search"),g=document.querySelector(".search-input input"),l=document.querySelector(".search-select select"),O=document.querySelector(".events-list");function u(r="",t=""){b(r,t),P(),w().then(e=>{if(!e.length){const n=document.createElement("div");n.classList.add("no-results"),n.innerHTML=`
-          <img src="../img/main-section/no-results.svg" alt="No results found" />
+          <img src="./img/main-section/no-results.svg" alt="No results found" />
           <p>Нічого не знайдено</p>
         `,O.appendChild(n);return}C(e)}).catch(e=>{console.log("Помилка при отриманні events:",e)})}u();N.addEventListener("submit",r=>{r.preventDefault();const t=g.value.trim(),e=l.value;!t&&!e||u(t,e)});l.addEventListener("change",()=>{const r=g.value.trim(),t=l.value;!r&&!t||u(r,t)});
 //# sourceMappingURL=commonHelpers.js.map
