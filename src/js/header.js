@@ -1,5 +1,6 @@
 import { setSearch, getEvents } from './main-section-api';
 import { drawEvents, clearEvents } from './main-section-layout';
+import noResultsImg from '../img/main-section/no-results.svg';
 
 const heroSearchForm = document.querySelector('.hero-search');
 const searchInput = document.querySelector('.search-input input');
@@ -16,7 +17,7 @@ function fetchEventCards(searchText = '', countryCode = '') {
         const noResultsDiv = document.createElement('div');
         noResultsDiv.classList.add('no-results');
         noResultsDiv.innerHTML = `
-          <img src="./img/main-section/no-results.svg" alt="No results found" />
+          <img src="${noResultsImg}" alt="No results found" />
           <p>Нічого не знайдено</p>
         `;
         eventsList.appendChild(noResultsDiv);
