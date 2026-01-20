@@ -4,6 +4,7 @@ import { drawEvents, clearEvents } from './main-section-layout';
 const heroSearchForm = document.querySelector('.hero-search');
 const searchInput = document.querySelector('.search-input input');
 const countrySelect = document.querySelector('.search-select select');
+const eventsList = document.querySelector('.events-list');
 
 function fetchEventCards(searchText = '', countryCode = '') {
   setSearch(searchText, countryCode);
@@ -12,7 +13,13 @@ function fetchEventCards(searchText = '', countryCode = '') {
   getEvents()
     .then(events => {
       if (!events.length) {
-        alert('Нічого не знайдено');
+        const noResultsDiv = document.createElement('div');
+        noResultsDiv.classList.add('no-results');
+        noResultsDiv.innerHTML = `
+          <img src="../img/main-section/no-results.svg" alt="No results found" />
+          <p>Нічого не знайдено</p>
+        `;
+        eventsList.appendChild(noResultsDiv);
         return;
       }
       drawEvents(events);
@@ -30,10 +37,7 @@ heroSearchForm.addEventListener('submit', e => {
   const searchText = searchInput.value.trim();
   const countryCode = countrySelect.value;
 
-  if (!searchText && !countryCode) {
-    alert('будь ласка, введіть пошук або оберіть країну');
-    return;
-  }
+  if (!searchText && !countryCode) return;
 
   fetchEventCards(searchText, countryCode);
 });
