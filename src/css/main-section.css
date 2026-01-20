@@ -16,6 +16,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 
 #eventsList > li {
@@ -117,6 +118,25 @@
   justify-content: center;
 }
 
+.no-results {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  color: #939393;
+}
+
+.no-results img {
+  max-width: 450px;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
 
 @media screen and (max-width: 1199px) {
   .events-list {
@@ -129,5 +149,15 @@
   .events-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+  }
+
+  .no-results {
+    font-size: 18px;
+    padding: 50px 0;
+  }
+
+  .no-results img {
+    max-width: 250px;
+    width: 70%;
   }
 }
