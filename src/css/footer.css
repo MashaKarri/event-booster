@@ -1,18 +1,11 @@
 .footer {
   font-family: 'Montserrat', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  margin-top: auto;
 }
 
 .text_content {
-  width: 560px;
-  height: 20px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
   color: #939393;
   text-align: center;
   padding: 20px 0;
@@ -28,21 +21,9 @@
 }
 
 
-@media screen and (max-width: 1199px) {
-  .text_content {
-    width: 521px;
-    height: 20px;
-    text-align: center;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .text_content {
-    width: 252px;
-    height: 34px;
     font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    word-break: break-word;
+    line-height: 1.3;
   }
 }
