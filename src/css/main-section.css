@@ -137,6 +137,22 @@
   margin-bottom: 20px;
 }
 
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#eventsList > li {
+  opacity: 0;
+  animation: cardFadeUp 0.4s ease-out forwards;
+}
+
 
 @media screen and (max-width: 1199px) {
   .events-list {
