@@ -5,3 +5,4 @@ import './js/main-section-pagination';
 import './js/main-modal-api';
 import './js/main-modal-layout';
 import './js/main-modal';
+import './js/scroll-to-top';
