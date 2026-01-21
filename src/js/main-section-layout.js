@@ -6,7 +6,7 @@ export function clearEvents() {
   eventsList.innerHTML = '';
 }
 
-function getBestImage(images = []) {
+export function getBestImage(images = []) {
   if (!images.length) return '';
 
   const sorted = images.sort((a, b) => b.width - a.width);
@@ -27,7 +27,7 @@ export function drawEvents(data = []) {
       const imageUrl = getBestImage(event.images);
 
       return `
-      <li class="list-item">
+      <li class="list-item" data-id="${event.id}">
         <img src="${imageUrl}" alt="${event.name}" loading="lazy">
         <h3>${event.name}</h3>
         <p>${event.dates.start.localDate}</p>
