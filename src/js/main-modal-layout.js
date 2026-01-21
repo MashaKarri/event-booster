@@ -28,7 +28,7 @@ function createPriceItem(type, min, max, currency = 'UAH', url = '#') {
         <svg class="price-icon" width="29" height="20">
           <use href="${spritePath}#barcode"></use>
         </svg>
-        <p>${type.toUpperCase()} ${min}-${max} ${currency}</p>
+        <p>${type} ${min}-${max} ${currency}</p>
       </div>
       <button class="buy-btn" onclick="window.open('${url}', '_blank')">BUY TICKETS</button>
     </div>

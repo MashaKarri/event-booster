@@ -246,3 +246,156 @@
   color: white;
   border-color: #692ef1;
 }
+
+
+@media screen and (max-width: 1199px) {
+  .modal-content {
+    max-width: 600px;
+    padding: 28px 17px 57px;
+  }
+
+  .modal-event-full {
+    grid-template-columns: 230px 1fr;
+    gap: 30px;
+  }
+
+  .modal-avatar {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 40px;
+  }
+
+  .criterion {
+    font-size: 20px;
+  }
+
+  .modal-right p {
+    font-size: 16px;
+  }
+
+  .buy-btn {
+    font-size: 16px;
+    padding: 9px 19px;
+  }
+
+  .more-btn {
+    width: 255px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    max-width: 270px;
+    padding: 75px 17px 104px;
+    border-radius: 150px 0;
+  }
+
+  .modal-body {
+    padding-right: 4px;
+  }
+
+  .modal-event-full {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .modal-left {
+    display: none;
+  }
+
+  .modal-avatar {
+    width: 102px;
+    height: 102px;
+    margin-bottom: 18px;
+  }
+
+  .modal-right {
+    gap: 4px;
+  }
+
+  .criterion {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .modal-right p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .modal-price-item {
+    gap: 12px;
+    align-items: center;
+  }
+
+  .price-with-icon {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 8px;
+  }
+
+  .price-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 16px;
+  }
+
+  .modal-price-item p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .buy-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 12px;
+    align-self: center;
+  }
+
+  .more-btn {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .modal-close {
+    top: 25px;
+    right: 25px;
+    font-size: 22px;
+  }
+
+  .modal-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .modal-right p {
+    text-align: center;
+  }
+
+  .criterion {
+    text-align: center;
+  }
+
+  .modal-price-item {
+    align-items: center;
+  }
+
+  .price-with-icon {
+    justify-content: center;
+  }
+
+  .buy-btn {
+    align-self: center;
+  }
+}
