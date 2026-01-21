@@ -1,0 +1,248 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 250ms ease,
+    visibility 250ms ease;
+}
+
+.modal.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff2fd;
+  border-radius: 300px 0;
+  padding: 38px 30px 62px 30px;
+
+  width: 90%;
+  max-width: 930px;
+  max-height: 90vh;
+
+  overflow: hidden;
+  color: #fff;
+
+  transform: scale(1);
+  transition: transform 250ms ease;
+}
+
+.modal.is-hidden .modal-content {
+  transform: scale(0.9);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 25px;
+  height: 25px;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: transparent;
+  color: #4c00fe;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+
+.modal-close:hover {
+  transform: scale(1.1);
+}
+
+.modal-body {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+  max-height: calc(90vh - 100px);
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: rgba(220, 86, 197, 0.5);
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 86, 197, 0.8);
+}
+
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-event-full {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.modal-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+.modal-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-left {
+  overflow: hidden;
+  height: 100%;
+}
+
+.modal-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-right {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.criterion {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #dc56c5;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.modal-right p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  color: #0e0e0e;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.modal-price-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.price-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.price-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-price-item p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.buy-btn {
+  background-color: #4c00fe;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 19px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 200ms ease;
+  min-width: 145px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-bottom: 16px;
+}
+
+.buy-btn:hover {
+  background-color: #3800bb;
+  transform: translateY(-1px);
+}
+
+.more-btn {
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #4c00fe;
+  border: 1px solid #4c00fe;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 270px;
+  height: 40px;
+  margin-top: 15px;
+
+  grid-column: 1 / -1;
+  justify-self: center;
+
+  transition: all 200ms ease;
+  text-align: center;
+}
+
+.more-btn:hover {
+  background-color: #692ef1;
+  color: white;
+  border-color: #692ef1;
+}
