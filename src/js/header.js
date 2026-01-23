@@ -11,6 +11,13 @@ function fetchEventCards(searchText = '', countryCode = '') {
   setSearch(searchText, countryCode);
   clearEvents();
 
+  window.currentFilters = {
+    searchText,
+    countryCode,
+  };
+
+  window.dispatchEvent(new Event('filtersChanged'));
+
   getEvents()
     .then(events => {
       if (!events.length) {

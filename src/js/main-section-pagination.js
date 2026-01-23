@@ -17,6 +17,10 @@ if (!paginationEl) {
 async function init() {
   await loadPage(1);
   paginationEl.addEventListener('click', onClick);
+
+  window.addEventListener('filtersChanged', () => {
+    loadPage(1); 
+  });
 }
 
 async function loadPage(page) {
@@ -33,6 +37,10 @@ async function loadPage(page) {
     eventdate_from: today,
   });
 
+  const filters = window.currentFilters || {};
+  if (filters.searchText) params.append('keyword', filters.searchText);
+  if (filters.countryCode) params.append('countryCode', filters.countryCode);
+
   const response = await fetch(
     `https://app.ticketmaster.com/discovery/v2/events.json?${params}`
   );
@@ -40,7 +48,9 @@ async function loadPage(page) {
   const data = await response.json();
 
   const events = data._embedded?.events || [];
+
   totalPages = data.page?.totalPages || 1;
+
   currentPage = page;
 
   drawEvents(events);
