@@ -153,7 +153,6 @@
   animation: cardFadeUp 0.4s ease-out forwards;
 }
 
-
 @media screen and (max-width: 1199px) {
   .events-list {
     grid-template-columns: repeat(3, 1fr);
@@ -176,4 +175,58 @@
     max-width: 250px;
     width: 70%;
   }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination-item {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.pagination-item:hover:not(.active) {
+  color: #dc56c5;
+}
+
+.pagination-item.active {
+  border: 2px solid #dc56c5;
+  color: #dc56c5;
+  font-weight: 700;
+  width: 30px;
+  height: 30px;
+  border-radius: 12px 0 12px 0;
+  cursor: default;
+}
+
+.pagination-dots {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
 }
