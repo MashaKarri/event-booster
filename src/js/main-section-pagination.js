@@ -19,7 +19,7 @@ async function init() {
   paginationEl.addEventListener('click', onClick);
 
   window.addEventListener('filtersChanged', () => {
-    loadPage(1); 
+    loadPage(1);
   });
 }
 

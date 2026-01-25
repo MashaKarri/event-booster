@@ -153,6 +153,7 @@
   animation: cardFadeUp 0.4s ease-out forwards;
 }
 
+
 @media screen and (max-width: 1199px) {
   .events-list {
     grid-template-columns: repeat(3, 1fr);

@@ -190,14 +190,14 @@
   }
 
   .logo img {
-    width: 100%;
+    width: 90%;
   }
 
   .logo-bg {
     top: 0;
     left: 0;
-    width: 150px;
-    height: 125px;
+    width: 140px;
+    height: 115px;
   }
 
   .hero-content {
